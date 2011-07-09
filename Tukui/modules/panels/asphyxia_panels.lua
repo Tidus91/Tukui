@@ -279,7 +279,7 @@ if C["asphyxia_panels"].asphyxiatalent == true then
 if UnitLevel("player") <= 10 then return end
 
 local frame = CreateFrame("Frame", "AsphyxiaTalent", UIParent)
-frame:CreatePanel(nil, 20, 20, "RIGHT", TukuiInfoRight, "LEFT", -3, 0)
+frame:CreatePanel(nil, 20, 20, "LEFT", TukuiInfoLeft, "RIGHT", 3, 23)
 frame:EnableMouse(true)
 
 frame.tex = frame:CreateTexture(nil, "ARTWORK")

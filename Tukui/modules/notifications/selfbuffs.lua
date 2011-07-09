@@ -31,6 +31,9 @@ T.remindbuffs = {
 		324, -- lightning shield
 		974, -- earth shield
 	},
+	DRUID = {
+		24858, -- moonkin form
+	},
 	WARRIOR = {
 		469, -- commanding Shout
 		6673, -- battle Shout

@@ -471,8 +471,8 @@ local function Shared(self, unit)
 				if T.myclass == "DRUID" then
 
 					local eclipseBar = CreateFrame('Frame', nil, self)
-					eclipseBar:Point("TOPLEFT", health, "TOPLEFT", 7, 5)
-					eclipseBar:Size(85, 5)
+					eclipseBar:Point("TOPLEFT", health, "TOPLEFT", 9, 6)
+					eclipseBar:Size(228, 5)
 					eclipseBar:SetFrameStrata("MEDIUM")
 					eclipseBar:SetFrameLevel(8)
 					eclipseBar:SetBackdropBorderColor(0,0,0,0)
