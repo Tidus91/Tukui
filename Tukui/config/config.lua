@@ -20,7 +20,7 @@ C["unitframes"] = {
 	["hideunitframes"] = false,							-- hide unitframes  when out of combat.
 	["enemyhcolor"] = true,                            	-- enemy target (players) color by hostility, very useful for healer.
 	["unitcastbar"] = true,                            		-- enable tukui castbar
-	["cblatency"] = true,                             		-- enable castbar latency
+	["cblatency"] = false,                             		-- enable castbar latency
 	["cbicons"] = true,                                 		-- enable icons on castbar
 	["cbspark"] = true,										-- enable castbar spark
 	["auratimer"] = true,                               		-- enable timers on buffs/debuffs
@@ -37,15 +37,15 @@ C["unitframes"] = {
 	["maintank"] = true,                               		-- enable maintank
 	["mainassist"] = true,                             		-- enable mainassist
 	["unicolor"] = true,                              			-- enable unicolor theme
-	["combatfeedback"] = true,                         	-- enable combattext on player and target.
+	["combatfeedback"] = false,                         	-- enable combattext on player and target.
 	["playeraggro"] = true,                             		-- color player border to red if you have aggro on current target.
 	["healcomm"] = true,                               		-- enable healprediction support.
 	["onlyselfdebuffs"] = false,                        	-- display only our own debuffs applied on target
-	["showfocustarget"] = true,                         	-- show focus target
+	["showfocustarget"] = false,                         	-- show focus target
 	["bordercolor"] = { 0, 0, 0, 1 },                 		-- unit frames panel border color
 	["extendedpet"] = true,                         		-- extended pet frame
 	["showsolo"] = true,                        				-- show raid frames when solo (DPS only)
-	["gradienthealth"] = true,                          	-- change raid health color based on health percent.
+	["gradienthealth"] = false,                          	-- change raid health color based on health percent.
 	["gradient"] = {                                    			-- health gradient color if unicolor is true.
 		4.5, 0.1, 0.1, -- R, G, B (low HP)
 		0.6, 0.3, 0.3, -- R, G, B (medium HP)
@@ -91,7 +91,7 @@ C["actionbar"] = {
 	["hotkey"] = true,                                		   -- enable hotkey display on buttons.
 	["macrotext"] = true,								   -- display macro text on buttons.
 	["hideshapeshift"] = false,                            -- hide shapeshift or totembar because it was a lot requested.
-	["verticalshapeshift"] = false,						   -- set shapeshift bar to show vertically
+	["verticalshapeshift"] = true,						   -- set shapeshift bar to show vertically
 	["showgrid"] = true,                                     -- show grid on empty button
 	["buttonsize"] = 27,                                      -- normal buttons size
 	["petbuttonsize"] = 27,                                 -- pet & stance buttons size
@@ -116,10 +116,12 @@ C["Addon_Skins"] = {
 	["Omen"] = true,									-- Enable Omen Skin
 	["KLE"] = true,										-- Enable KLE Skin
 	["TinyDPS"] = true,									-- Enable TinyDPS Skin
+	["Clique"] = true,									-- Enable Clique Skin
+	["Bigwigs"] = true,										-- Enable BigWigs Skin
 }
 
 C["DBM_Skin"] = {
-	["barheight"] = 16,									-- Set bar height of timer bars.
+	["barheight"] = 20,									-- Set bar height of timer bars.
 	["barwidth"] = 150,									-- Set bar width of timer bars.
 	["iconsize"] = 20,									-- Change spell icon size.
 }
@@ -140,7 +142,7 @@ C["map"] = {
 C["loot"] = {
 	["lootframe"] = true,                               -- reskin the loot frame to fit tukui
 	["rolllootframe"] = true,                           -- reskin the roll frame to fit tukui
-	["autogreed"] = true,                               -- auto-dez or auto-greed item at max level, auto-greed Frozen orb
+	["autogreed"] = false,                               -- auto-dez or auto-greed item at max level, auto-greed Frozen orb
 }
 
 C["cooldown"] = {
@@ -155,7 +157,7 @@ C["datatext"] = {
 	["gold"] = 6,                                       -- show your current gold on panels
 	["wowtime"] = 7,                                    -- show time on panels
 	["guild"] = 1,                                      -- show number on guildmate connected on panels
-	["dur"] = 0,                                        -- show your equipment durability on panels.
+	["dur"] = 5,                                        -- show your equipment durability on panels.
 	["friends"] = 2,                                    -- show number of friends connected.
 	["dps_text"] = 0,                                   -- show a dps meter on panels
 	["hps_text"] = 0,                                   -- show a heal meter on panels
@@ -166,14 +168,14 @@ C["datatext"] = {
 	["armor"] = 0,                                      -- show your armor value against the level mob you are currently targeting
 	["currency"] = 0,                                  -- show your tracked currency on panels
 	["hit"] = 13,                                        -- show hit rating
-	["mastery"] =5,                                    -- show mastery rating
+	["mastery"] = 0,                                    -- show mastery rating
 	["micromenu"] = 15,                                  -- add a micro menu thought datatext
 	["regen"] = 0,                                      -- show mana regeneration
 	["specswitcher"] = 0,								-- show talents on panels
 	["profession"] = 3,									-- show profession
 	
 	-- Color Datatext
-	["classcolored"] = false,							-- classcolored datatext
+	["classcolored"] = true,							-- classcolored datatext
 	["color"] = {0.3, 0.2, 1},							-- datatext color (if classcolored = false) -- 0.15, 0.49, 0.69
 
 
@@ -195,7 +197,7 @@ C["databars"] = {
 		"Therazane",
 		"Dragonmaw Clan",
 		"Guardians of Hyjal",
-		"Systematic Chaos",
+		"Vindicta",
 	},
 }
 
@@ -241,7 +243,7 @@ C["merchant"] = {
 }
 
 C["error"] = {
-	["enable"] = true,                                  -- true to enable this mod, false to disable
+	["enable"] = false,                                  -- true to enable this mod, false to disable
 	filter = {                                          -- what messages to not hide
 		[INVENTORY_FULL] = true,                        -- inventory is full will not be hidden by default
 	},
