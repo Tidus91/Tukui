@@ -21,7 +21,7 @@ AddonSkins_Mod:RegisterSkin("Recount",function(Skin, skin, Layout, layout, confi
 
 	local function SkinFrame(frame)
 		frame.bgMain = CreateFrame("Frame",nil,frame)
-		skin:SkinBackgroundFrame(frame.bgMain)
+		--skin:SkinBackgroundFrame(frame.bgMain)
 		frame.bgMain:SetPoint("BOTTOMLEFT",frame,"BOTTOMLEFT")
 		frame.bgMain:SetPoint("BOTTOMRIGHT",frame,"BOTTOMRIGHT")
 		frame.bgMain:SetPoint("TOP",frame,"TOP",0,-30)
@@ -43,13 +43,13 @@ AddonSkins_Mod:RegisterSkin("Recount",function(Skin, skin, Layout, layout, confi
 	-- Override bar textures
 	Recount.UpdateBarTextures = function(self)
 		for k, v in pairs(Recount.MainWindow.Rows) do
-			v.StatusBar:SetStatusBarTexture(config.normTexture)
-			v.StatusBar:GetStatusBarTexture():SetHorizTile(false)
-			v.StatusBar:GetStatusBarTexture():SetVertTile(false)
+			--v.StatusBar:SetStatusBarTexture(config.normTexture)
+			--v.StatusBar:GetStatusBarTexture():SetHorizTile(false)
+			--v.StatusBar:GetStatusBarTexture():SetVertTile(false)
 			v.LeftText:SetPoint("LEFT", 4, 0)
-			v.LeftText:SetFont(C.media.pixelfont, C["datatext"].fontsize, "MONOCHROMEOUTLINE")
+			v.LeftText:SetFont(C.media.dmgfont, 12, "MONOCHROMEOUTLINE")
 			v.RightText:SetPoint("RIGHT", -4, 0)
-			v.RightText:SetFont(C.media.pixelfont, C["datatext"].fontsize, "MONOCHROMEOUTLINE")
+			v.RightText:SetFont(C.media.dmgfont, 12, "MONOCHROMEOUTLINE")
 		end
 	end
 	Recount.SetBarTextures = Recount.UpdateBarTextures
@@ -58,7 +58,7 @@ AddonSkins_Mod:RegisterSkin("Recount",function(Skin, skin, Layout, layout, confi
 	Recount.SetupBar_ = Recount.SetupBar
 	Recount.SetupBar = function(self, bar)
 		self:SetupBar_(bar)
-		bar.StatusBar:SetStatusBarTexture(config.normTexture)
+		--bar.StatusBar:SetStatusBarTexture(config.normTexture)
 	end
 	
 	-- Skin frames when they're created

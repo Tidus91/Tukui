@@ -322,7 +322,7 @@ local function Shared(self, unit)
 				ExperienceBG:SetVertexColor(.1,.1,.1,1)
 
 				Experience.Text = self.Experience:CreateFontString(nil, 'OVERLAY')
-				Experience.Text:SetFont(font, 8, "MONOCHROMEOUTLINE")
+				Experience.Text:SetFont(font, 10, "MONOCHROMEOUTLINE")
 				Experience.Text:SetPoint('CENTER', self.Experience)
 				Experience.Text:SetShadowOffset(T.mult, -T.mult)
 				self.Experience.Text = Experience.Text
@@ -405,7 +405,7 @@ local function Shared(self, unit)
 				ReputationBG:SetVertexColor(.1,.1,.1,1)
 
 				Reputation.Text = Reputation:CreateFontString(nil, 'OVERLAY')
-				Reputation.Text:SetFont(font, 8, "MONOCHROMEOUTLINE")
+				Reputation.Text:SetFont(font, 10, "MONOCHROMEOUTLINE")
 				Reputation.Text:SetPoint('CENTER', Reputation)
 				Reputation.Text:SetShadowOffset(T.mult, -T.mult)
 				Reputation.Text:Show()
@@ -761,12 +761,12 @@ local function Shared(self, unit)
 			castbar.bg:SetVertexColor(.05, .05, .05)
 			if unit == "player" then
 				if C["unitframes"].cbicons == true then
-					castbar:SetWidth(TukuiPetBar:GetWidth() - 4)
+					castbar:SetWidth(TukuiBar1:GetWidth() - 4)
 				else
-					castbar:SetWidth(TukuiPetBar:GetWidth() - 4)
+					castbar:SetWidth(TukuiBar1:GetWidth() - 4)
 				end
 				castbar:SetHeight(17)
-				castbar:Point("BOTTOM", TukuiPetBar, "TOP", 0, 7)
+				castbar:Point("BOTTOM", TukuiBar1, "TOP", 0, 3)
 			elseif unit == "target" then
 				if C["unitframes"].cbicons == true then
 					castbar:SetWidth(246 - 27)
@@ -796,14 +796,14 @@ local function Shared(self, unit)
 			castbar.PostCastStart = T.PostCastStart
 			castbar.PostChannelStart = T.PostCastStart
 
-			castbar.time = T.SetFontString(castbar,font, 8, "MONOCHROMEOUTLINE")
+			castbar.time = T.SetFontString(castbar,font, 10, "THINOUTLINE")
 			castbar.time:Point("RIGHT", castbar.bg, "RIGHT", -4, 0)
-			castbar.time:SetTextColor(0, 4, 0)
+			castbar.time:SetTextColor(255, 255, 255)
 			castbar.time:SetJustifyH("RIGHT")
 
-			castbar.Text = T.SetFontString(castbar,font, 8, "MONOCHROMEOUTLINE")
+			castbar.Text = T.SetFontString(castbar,font, 10, "THINOUTLINE")
 			castbar.Text:Point("LEFT", castbar.bg, "LEFT", 4, 0)
-			castbar.Text:SetTextColor(0.3, 0.2, 1)
+			castbar.Text:SetTextColor(255, 255, 255)
 			castbar.Text:Width(100)
 			castbar.Text:Height(10)
 			

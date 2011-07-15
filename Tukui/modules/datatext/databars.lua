@@ -25,7 +25,7 @@ for i = 1, 4 do
 	HydraData[i].Status:Point("BOTTOMRIGHT", HydraData[i], "BOTTOMRIGHT", -2, 2)
 
 	HydraData[i].Text = HydraData[i].Status:CreateFontString(nil, "OVERLAY")
-	HydraData[i].Text:SetFont(C.media.pixelfont, 8, "MONOCHROMEOUTLINE")
+	HydraData[i].Text:SetFont(C.media.pixelfont, 10, "MONOCHROMEOUTLINE")
 	HydraData[i].Text:Point("LEFT", HydraData[i], "LEFT", 6, 1.5)
 	HydraData[i].Text:SetShadowColor(0, 0, 0)
 	HydraData[i].Text:SetShadowOffset(1.25, -1.25)

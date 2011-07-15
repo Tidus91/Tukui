@@ -29,9 +29,9 @@ AddonSkins_Mod:RegisterSkin("Omen",function(Skin, skin, Layout, layout, config)
 	Omen.UpdateBarLabelSettings = function(self)
 		self:UpdateBarLabelSettings_()
 		for i, v in ipairs(self.Bars) do
-			v.Text1:SetFont(C.media.pixelfont, C["datatext"].fontsize, "MONOCHROMEOUTLINE")
-			v.Text2:SetFont(C.media.pixelfont, C["datatext"].fontsize, "MONOCHROMEOUTLINE")
-			v.Text3:SetFont(C.media.pixelfont, C["datatext"].fontsize, "MONOCHROMEOUTLINE")
+			v.Text1:SetFont(C.media.dmgfont, 12, "MONOCHROMEOUTLINE")
+			v.Text2:SetFont(C.media.dmgfont, 12, "MONOCHROMEOUTLINE")
+			v.Text3:SetFont(C.media.dmgfont, 12, "MONOCHROMEOUTLINE")
 		end
 	end
 	-- Skin Title Bar
@@ -52,9 +52,9 @@ AddonSkins_Mod:RegisterSkin("Omen",function(Skin, skin, Layout, layout, config)
 		Omen.db.profile.Background.EdgeSize = 1
 		Omen.db.profile.Background.BarInset = config.borderWidth
 		self:UpdateBackdrop_()
-		skin:SkinBackgroundFrame(self.BarList)
+		--skin:SkinBackgroundFrame(self.BarList)
 		-- skin:SkinBackgroundFrame(self.Title)
-		self.Title:SetBackdropColor(0,0,0,0)
+		--self.Title:SetBackdropColor(0,0,0,0)
 		self.Title:SetBackdropBorderColor(0,0,0,0)
 		self.BarList:SetPoint("TOPLEFT", self.Title, "BOTTOMLEFT",0,-1)
 	end
