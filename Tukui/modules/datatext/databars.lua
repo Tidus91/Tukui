@@ -20,7 +20,14 @@ for i = 1, 4 do
 	HydraData[i].Status:SetFrameLevel(12)
 	HydraData[i].Status:SetStatusBarTexture(C.media.normTex)
 	HydraData[i].Status:SetMinMaxValues(0, 100)
+	
+	local classcolorbar = RAID_CLASS_COLORS[T.myclass]
+	if C["datatext"].classcolored then
+		HydraData[i].Status:SetStatusBarColor(classcolorbar.r,classcolorbar.g,classcolorbar.b)
+	else
 	HydraData[i].Status:SetStatusBarColor(0.3, 0.2, 1)
+	end
+	
 	HydraData[i].Status:Point("TOPLEFT", HydraData[i], "TOPLEFT", 2, -2)
 	HydraData[i].Status:Point("BOTTOMRIGHT", HydraData[i], "BOTTOMRIGHT", -2, 2)
 
@@ -60,7 +67,14 @@ HydraData[1].Status:SetScript("OnUpdate", function(self, elapsed)
 		local max = GetCVar("MaxFPS")
 		self:SetValue(value)
 		HydraData[1].Text:SetText("FPS: "..value)
+		
+	local classcolorbar = RAID_CLASS_COLORS[T.myclass]
+	if C["datatext"].classcolored then
+		self:SetStatusBarColor(classcolorbar.r,classcolorbar.g,classcolorbar.b)
+	else
 		self:SetStatusBarColor(0.3, 0.2, 1)
+	end
+		
 		LastUpdate = 1
 	end
 end)
@@ -75,7 +89,14 @@ HydraData[2].Status:SetScript("OnUpdate", function(self, elapsed)
 		local max = 200
 		self:SetValue(value)
 		HydraData[2].Text:SetText("MS: "..value)			
+		
+	local classcolorbar = RAID_CLASS_COLORS[T.myclass]
+	if C["datatext"].classcolored then
+		self:SetStatusBarColor(classcolorbar.r,classcolorbar.g,classcolorbar.b)
+	else
 		self:SetStatusBarColor(0.3, 0.2, 1)
+	end
+		
 		LastUpdate = 1
 	end
 end)
@@ -174,7 +195,14 @@ HydraData[4].Status:SetScript("OnEvent", function(self)
 	self:SetMinMaxValues(0, 100)
 	self:SetValue(value)
 	HydraData[4].Text:SetText("Durability: "..value.."%")			
-	self:SetStatusBarColor(0.3, 0.2, 1)
+
+	local classcolorbar = RAID_CLASS_COLORS[T.myclass]
+	if C["datatext"].classcolored then
+		self:SetStatusBarColor(classcolorbar.r,classcolorbar.g,classcolorbar.b)
+	else
+		self:SetStatusBarColor(0.3, 0.2, 1)
+	end
+	
 end)
 HydraData[4].Status:RegisterEvent("UPDATE_INVENTORY_DURABILITY")
 HydraData[4].Status:RegisterEvent("MERCHANT_SHOW")

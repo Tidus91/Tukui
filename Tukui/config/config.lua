@@ -54,12 +54,12 @@ C["unitframes"] = {
 	
 	-- raid layout (if one of them is enabled)
 	["showrange"] = true,                               	-- show range opacity on raidframes
-	["raidalphaoor"] = 0.3,                             		-- alpha of unitframes when unit is out of range
+	["raidalphaoor"] = 0.5,                             		-- alpha of unitframes when unit is out of range
 	["gridonly"] = true,                               		-- enable grid only mode for all healer mode raid layout.
 	["showsymbols"] = true,	                            -- show symbol.
 	["aggro"] = true,                                   		-- show aggro on all raids layouts
 	["raidunitdebuffwatch"] = true,                     	-- track important spell to watch in pve for grid mode.
-	["gridhealthvertical"] = false,                     	-- enable vertical grow on health bar for grid mode.
+	["gridhealthvertical"] = true,                     	-- enable vertical grow on health bar for grid mode.
 	["showplayerinparty"] = true,                      	-- show my player frame in party
 	["gridscale"] = 1,                                  			-- set the healing grid scaling
 	
@@ -95,7 +95,7 @@ C["actionbar"] = {
 	["hotkey"] = true,                                		   -- enable hotkey display on buttons.
 	["macrotext"] = false,								   -- display macro text on buttons.
 	["hideshapeshift"] = false,                            -- hide shapeshift or totembar because it was a lot requested.
-	["verticalshapeshift"] = true,						   -- set shapeshift bar to show vertically
+	["verticalshapeshift"] = false,						   -- set shapeshift bar to show vertically
 	["showgrid"] = true,                                     -- show grid on empty button
 	["buttonsize"] = 27,                                      -- normal buttons size
 	["petbuttonsize"] = 27,                                 -- pet & stance buttons size
@@ -121,7 +121,7 @@ C["Addon_Skins"] = {
 	["KLE"] = true,										-- Enable KLE Skin
 	["TinyDPS"] = true,									-- Enable TinyDPS Skin
 	["Clique"] = true,									-- Enable Clique Skin
-	["Bigwigs"] = true,										-- Enable BigWigs Skin
+	["Bigwigs"] = true,									-- Enable BigWigs Skin
 }
 
 C["DBM_Skin"] = {
@@ -156,12 +156,12 @@ C["cooldown"] = {
 
 C["datatext"] = {
 	["fps_ms"] = 0,                                     -- show fps and ms on panels
-	["system"] = 0,                                     -- show total memory and others systems infos on panels
+	["system"] = 5,                                     -- show total memory and others systems infos on panels
 	["bags"] = 16,                                       -- show space used in bags on panels
 	["gold"] = 6,                                       -- show your current gold on panels
 	["wowtime"] = 7,                                    -- show time on panels
 	["guild"] = 1,                                      -- show number on guildmate connected on panels
-	["dur"] = 5,                                        -- show your equipment durability on panels.
+	["dur"] = 0,                                        -- show your equipment durability on panels.
 	["friends"] = 2,                                    -- show number of friends connected.
 	["dps_text"] = 0,                                   -- show a dps meter on panels
 	["hps_text"] = 0,                                   -- show a heal meter on panels

@@ -155,8 +155,6 @@
 	<Script file="modules\addonskins\Recount.lua"/>
 	<Script file="modules\addonskins\Skada.lua"/>
 	<Script file="modules\addonskins\TinyDPS.lua"/>
-	<Script file="modules\addonskins\clique.lua"/>
-	<Script file="modules\addonskins\bigwigs.lua"/>
 	
 	<Script file="modules\skins\core.lua"/>
 	<Script file="modules\skins\achievement.lua"/>
@@ -213,6 +211,9 @@
 	<Script file="modules\skins\worldmap.lua"/>
 	<Script file="modules\skins\tutorial.lua"/>
 	<Script file="modules\skins\colorpicker.lua"/>
+	
+	<Script file="modules\skins\addons\clique.lua"/>
+	<Script file="modules\skins\addons\bigwigs.lua"/>
 	
 	<Include file="modules\unitframes\templates\tankassist.xml"/>
 	<Script file="modules\unitframes\tags\tags.lua"/>

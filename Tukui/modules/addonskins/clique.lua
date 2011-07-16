@@ -100,4 +100,4 @@ local function LoadSkin()
 	CliqueSpellTab:StyleButton(true)
 end
 
-T.SkinFuncs["Tukui"] = LoadSkin
+tinsert(T.SkinFuncs["Tukui"], LoadSkin)
